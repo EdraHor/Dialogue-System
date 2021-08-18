@@ -1,0 +1,42 @@
+<Conversation>
+	<Key>First</Key> <!-- Ключ по которому будет вызываться диалог -->
+	
+	<Node id="1">
+		<Name>Frank</Name>
+		<Text>Привет! Это первый тестовый диалог, загруженный из XML файла</Text>
+	</Node>
+
+
+	<Node id="2">
+		<Text>Этот &lt;color=red&gt;нод&lt;/color&gt; без имени говорящего - монолог, мысли героя</Text>
+	</Node>
+
+
+	<Node id="3">
+		<Name>Frank</Name>
+		<Text>Это особый нод, в нем у нас есть выбор, после нажатия на одну из кнопок нас перенесет на определенную ноду по ее номеру</Text>
+		
+		<Choice Key="question_1">
+			<Answer NextNode="1" AnswerID="1">
+				<!-- Вместо следующей ноды ID + в node добавить условие наступление диалога condition-->
+				<AnswerText>Перейти на ноду 0</AnswerText>
+			</Answer>
+			
+			<Answer NextNode="4" AnswerID="2">
+				<AnswerText>Перейти на последнюю ноду</AnswerText>
+			</Answer>
+			
+			<Answer NextNode="3" AnswerID="3">
+				<AnswerText>Продолжить дальше</AnswerText>
+			</Answer>
+		</Choice>
+	</Node>
+	
+	<Node id="4">
+		<Name>Frank</Name>
+		<Text>Класс, выбор был сохранен</Text>
+	</Node>
+	<Node id="-1">
+		<Text>Это последний нод в диалоге, после него диалоговое окно должно исчезнуть</Text>
+	</Node>
+</Conversation>

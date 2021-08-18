@@ -1,0 +1,40 @@
+<Conversation>
+	<Key>SecondConversation</Key> <!-- Ключ по которому будет вызываться диалог -->
+
+	<Node id="1">
+		<Text>Это &lt;b&gt;второй&lt;/b&gt; тестовый &lt;i&gt;диалог&lt;/i&gt;, но же из другого XML файла</Text>
+	</Node>
+
+	<Node id="2">
+		<Name>Frank?</Name>
+		<Text>Он &lt;size=80&gt;&lt;b&gt;очень&lt;/b&gt;&lt;/size&gt; короткий и показывает, что можно запускать диалоги самостоятельно</Text>
+	</Node>
+
+	<Node id="3">
+		<Text>После этого нода будет последствие выбора в первом диалоге и соответственно разные ноды</Text>
+	</Node>
+
+	<Node id="4">
+		<Condition AnswerKey="question_1">
+			<Answer NextNode="0" AnswerID="1"></Answer>
+			<Answer NextNode="4" AnswerID="2"></Answer>
+			<Answer NextNode="6" AnswerID="3"></Answer>
+		</Condition>
+	</Node>
+
+	<Node id="5">
+		<Text>В прошлый раз ты нажал на вторую кнопку</Text>
+	</Node>
+	<Node id="-1">
+		<Text>Это конец</Text>
+	</Node>
+	
+
+	<Node id="7">
+		<Text>Ты нажал на счастливую третью кнопку</Text>
+	</Node>
+	<Node id="-1">
+		<Text>Это очередной конец</Text>
+	</Node>
+	
+</Conversation>
